@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loving Homes - Luxury Dog Retreat</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles .css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Floating Blobs -->
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+
+<header>
+  <div class="logo">Loving Homes</div>
+  <nav>
+    <ul>
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#facilities" class="nav-link">Facilities</a></li>
+      <li><a href="#quiz" class="nav-link">Pet Quiz</a></li>
+      <li><a href="#packages" class="nav-link">Packages</a></li>
+      <li><a href="#about" class="nav-link">About Us</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-btn"><i class="fa-solid fa-moon"></i></button>
+</header>
+
+<section id="home" class="hero reveal fade-up">
+  <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?auto=format&fit=crop&w=1200&q=60">
+    <source src="https://cdn.coverr.co/videos/coverr-dog-enjoying-a-sunny-day-3095/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+    <h1>Welcome to Loving Homes</h1>
+    <p>A Premier Paradise for Your Pets</p>
+  </div>
+</section>
+
+<main>
+  <section id="facilities" class="reveal fade-up">
+    <h2 class="reveal fade-up">Explore Our Modern Facilities</h2>
+    <div class="facilities">
+      <div class="facility reveal fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Room icon" width="70" height="70" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://img.icons8.com/fluency/96/dog.png';">
+        <h3>Luxury Suites</h3>
+        <p>Each private suite features climate control, soothing music, and plush bedding — ensuring every guest enjoys peaceful rest in their own space.</p>
+      </div>
+      <div class="facility reveal fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Spa icon" width="70" height="70" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://img.icons8.com/fluency/96/dog.png';">
+        <h3>Wellness &amp; Spa</h3>
+        <p>Our wellness center includes professional grooming, aromatherapy, paw massages, and vet-supervised care for complete relaxation and health.</p>
+      </div>
+      <div class="facility reveal fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Play icon" width="70" height="70" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://img.icons8.com/fluency/96/dog.png';">
+        <h3>Playgrounds &amp; Trails</h3>
+        <p>Expansive green fields, safe agility tracks, and shaded woodland walks give every dog a chance to run, play, and explore in freedom.</p>
+      </div>
+      <div class="facility reveal fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Dining icon" width="70" height="70" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://img.icons8.com/fluency/96/dog.png';">
+        <h3>Gourmet Dining</h3>
+        <p>Our pet chefs prepare nutritious meals using fresh ingredients, with options tailored to dietary preferences or special medical needs.</p>
+      </div>
+      <div class="facility reveal fade-up">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Training icon" width="70" height="70" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://img.icons8.com/fluency/96/dog.png';">
+        <h3>Training &amp; Enrichment</h3>
+        <p>From basic obedience to fun tricks, our positive-reinforcement trainers keep minds sharp and tails wagging.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="quiz-section reveal fade-up">
+    <h2>Discover Your Pet's Personality</h2>
+    <form id="petQuiz" novalidate>
+      <label for="breed">Pet Breed:</label>
+      <input type="text" id="breed" placeholder="e.g., Labrador" required>
+
+      <label for="energy">Energy Level:</label>
+      <select id="energy" required>
+        <option value="">Select energy level</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <label for="temperament">Temperament:</label>
+      <select id="temperament" required>
+        <option value="">Select temperament</option>
+        <option value="calm">Calm</option>
+        <option value="playful">Playful</option>
+        <option value="anxious">Anxious</option>
+      </select>
+
+      <label for="needs">Special Needs:</label>
+      <select id="needs" required>
+        <option value="">Select needs</option>
+        <option value="quiet">Quiet &amp; private</option>
+        <option value="active">Outdoor &amp; active</option>
+        <option value="social">Social &amp; interactive</option>
+      </select>
+
+      <button type="submit">See Recommendations</button>
+    </form>
+
+    <div class="quiz-result" id="quizResult" style="display:none;"></div>
+  </section>
+
+  <section id="packages" class="packages-section reveal fade-up">
+    <h1>Find the Perfect Stay for Your Pet</h1>
+    <p>Choose packages tailored to your pet’s comfort and personality.</p>
+    <div class="package-grid">
+      <div class="package-card" id="pkg-comfort">
+        <img class="package-image" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=80" alt="Happy dog outdoors playing" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Comfort+Stay';">
+        <h3 class="package-title">Comfort Stay</h3>
+        <p class="package-price">USD 49 per night</p>
+        <ul class="package-features">
+          <li><i class="fa-solid fa-paw"></i> Private luxury suite with plush bedding</li>
+          <li><i class="fa-solid fa-paw"></i> Climate control and calming music</li>
+          <li><i class="fa-solid fa-paw"></i> Daily gentle walks and cuddle time</li>
+        </ul>
+        <a href="#email" class="package-btn">Select</a>
+      </div>
+
+      <div class="package-card popular" id="pkg-adventure">
+        <img class="package-image" src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80" alt="Dog running and training" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Adventure+%26+Play';">
+        <h3 class="package-title">Adventure &amp; Play</h3>
+        <p class="package-price">USD 79 per night</p>
+        <ul class="package-features">
+          <li><i class="fa-solid fa-paw"></i> Agility courses and woodland trail time</li>
+          <li><i class="fa-solid fa-paw"></i> Interactive play sessions and enrichment</li>
+          <li><i class="fa-solid fa-paw"></i> Balanced indoor and outdoor activities</li>
+        </ul>
+        <a href="#email" class="package-btn">Select</a>
+      </div>
+
+      <div class="package-card" id="pkg-wellness">
+        <img class="package-image" src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb7?auto=format&fit=crop&w=1200&q=80" alt="Veterinarian grooming and spa care for dog" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Wellness+%26+Spa';">
+        <h3 class="package-title">Wellness &amp; Spa</h3>
+        <p class="package-price">USD 99 per night</p>
+        <ul class="package-features">
+          <li><i class="fa-solid fa-paw"></i> Vet-supervised wellness and check-ins</li>
+          <li><i class="fa-solid fa-paw"></i> Grooming, aromatherapy, and paw massages</li>
+          <li><i class="fa-solid fa-paw"></i> Tailored meals for dietary needs</li>
+        </ul>
+        <a href="#email" class="package-btn">Select</a>
+      </div>
+    </div>
+    <div>
+      <a href="#contact" class="book-btn">Book Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="about-section reveal fade-up">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+          Loving Homes began as a small, family-run luxury dog retreat led by veterinary
+          nurses and trainers who believed every stay should feel like home. Over the years,
+          we’ve grown into a vet-guided haven that blends expert care with enrichment-first fun.
+          Today, our team supports dogs of all ages and needs with compassion, safety, and joy.
+        </p>
+        <ul>
+          <li>Vet-led wellness oversight and 24/7 monitoring</li>
+          <li>Enrichment-first activities tailored to each dog</li>
+          <li>Transparent updates and easy owner check-ins</li>
+          <li>Safety-first design with climate-controlled comfort</li>
+        </ul>
+      </div>
+      <div class="about-gallery">
+        <img src="https://images.unsplash.com/photo-1582095133179-64deabdf95cf?auto=format&fit=crop&w=1200&q=80" alt="Doctor with stethoscope and medical tools" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Doctor+%26+Tools';">
+        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb7?auto=format&fit=crop&w=1200&q=80" alt="Veterinarian caring for a dog" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Vet+Care';">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=80" alt="Vet team at a clinic helping a dog" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Clinic+Team';">
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery-section reveal fade-up">
+    <div class="gallery-header">
+      <h2>Guest Gallery &amp; Testimonials</h2>
+      <p>Real moments from stays at Loving Homes. Filter by activity and see what owners say.</p>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="playtime">Playtime</button>
+        <button class="filter-btn" data-filter="spa">Spa</button>
+        <button class="filter-btn" data-filter="suites">Suites</button>
+        <button class="filter-btn" data-filter="training">Training</button>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <figure class="gallery-item" data-category="playtime">
+        <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=1200&q=80" alt="Dog enjoying playtime in the yard" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Playtime';">
+        <figcaption>Playtime in the yard</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="spa">
+        <img src="https://images.unsplash.com/photo-1556228578-8ea4b1d299b2?auto=format&fit=crop&w=1200&q=80" alt="Dog getting groomed at spa" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Spa';">
+        <figcaption>Spa grooming session</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="suites">
+        <img src="https://images.unsplash.com/photo-1535930891776-0c02f84f91cc?auto=format&fit=crop&w=1200&q=80" alt="Cozy suite with plush bedding" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Suite';">
+        <figcaption>Cozy luxury suite</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="training">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&q=80" alt="Agility training with dog" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Training';">
+        <figcaption>Agility training</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="playtime">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?auto=format&fit=crop&w=1200&q=80" alt="Fetch and fun" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Fetch';">
+        <figcaption>Fetch and fun</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="spa">
+        <img src="https://images.unsplash.com/photo-1558944351-c5d3f16776f8?auto=format&fit=crop&w=1200&q=80" alt="Bath time spa" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Bath+Time';">
+        <figcaption>Bath time</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="suites">
+        <img src="https://images.unsplash.com/photo-1516728778615-2d590ea1856f?auto=format&fit=crop&w=1200&q=80" alt="Suite lounge area" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Lounge';">
+        <figcaption>Suite lounge</figcaption>
+      </figure>
+      <figure class="gallery-item" data-category="training">
+        <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=1200&q=80" alt="Obedience training" loading="lazy" width="1200" height="800" decoding="async" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='https://placehold.co/1200x800?text=Obedience';">
+        <figcaption>Obedience training</figcaption>
+      </figure>
+    </div>
+
+    <div class="gallery-video">
+      <video autoplay muted loop playsinline preload="auto">
+        <source src="https://cdn.coverr.co/videos/coverr-golden-retriever-walking-5037/1080p.mp4" type="video/mp4">
+      </video>
+      <span class="video-caption">A calm stroll after playtime</span>
+    </div>
+
+    <div class="testimonials">
+      <article class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Our Labrador, Max, loved the Adventure & Play package. Daily updates made us feel at ease."</p>
+        <small>- Priya S., Labrador • Visit: Oct 2025</small>
+      </article>
+      <article class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"The Wellness & Spa team noticed a skin issue early and cared for Bella wonderfully."</p>
+        <small>- Aaron M., Shih Tzu • Visit: Sep 2025</small>
+      </article>
+      <article class="testimonial">
+        <div class="stars">★★★★☆</div>
+        <p>"Clean suites and a happy beagle. Loved the calm environment and gentle walks."</p>
+        <small>- Rina K., Beagle • Visit: Aug 2025</small>
+      </article>
+      <article class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>"Trainers were amazing with our energetic husky. He came home calmer and content."</p>
+        <small>- Leo D., Husky • Visit: Jul 2025</small>
+      </article>
+    </div>
+
+    <div class="numbers">
+      <div class="number-card">
+        <strong>8+</strong>
+        <span>Years in Service</span>
+      </div>
+      <div class="number-card">
+        <strong>3,200+</strong>
+        <span>Happy Stays</span>
+      </div>
+      <div class="number-card">
+        <strong>4.9</strong>
+        <span>Avg. Rating</span>
+      </div>
+    </div>
+
+    <div class="gallery-cta">
+      <a href="#packages" class="book-btn">Book a Stay</a>
+      <a href="#email" class="secondary-btn">Share Your Story</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-box reveal fade-up">
+    <h3>Ready to Give Your Pet the Experience They Deserve?</h3>
+    <p>Contact our team today to schedule a visit or ask questions!</p>
+    <a href="mailto:lovinghomes66@gmail.com?subject=Booking%20Inquiry%20-%20Loving%20Homes&body=Hi%20Loving%20Homes%2C%0A%0AI%27m%20interested%20in%20booking%20a%20stay%20for%20my%20pet.%20Please%20share%20availability%20and%20pricing.%0A%0AThank%20you.">Email Us</a>
+  </section>
+
+  <section id="email" class="email-section reveal fade-up">
+    <div class="email-card">
+      <h2>Send an Email to Loving Homes</h2>
+      <p>Use this form to email lovinghomes66@gmail.com from your email app.</p>
+
+      <form id="emailForm" novalidate>
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="e.g., Thejas Jayan" required>
+        </div>
+
+        <div class="form-row">
+          <label for="fromEmail">Your Email</label>
+          <input type="email" id="fromEmail" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Booking Inquiry" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" rows="7" placeholder="Write your message..." required></textarea>
+        </div>
+
+        <div class="form-row inline">
+          <label class="checkbox">
+            <input type="checkbox" id="sendCopy"> Send me a copy (CC)
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-btn"><i class="fa-solid fa-paper-plane"></i> Send Email</button>
+          <a class="secondary-btn" href="mailto:lovinghomes66@gmail.com">Open Mail App</a>
+        </div>
+        <p class="tiny-note">Your default email app will open with the message pre-filled. Actual sending happens from your email account.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<a href="#contact" class="cta">Book Now</a>
+
+<footer>
+  <p>&copy; 2025 Loving Homes. All rights reserved.</p>
+</footer>
+
+<script>
+// Ensure hero video autoplays, stays muted, loops, and covers hero
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.loop = true;
+  heroVideo.playsInline = true;
+  const tryPlay = () => heroVideo.play().catch(() => {});
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    tryPlay();
+  } else {
+    document.addEventListener('DOMContentLoaded', tryPlay);
+  }
+}
+
+// Scroll Reveal
+const reveals = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100) el.classList.add("active");
+  });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+// Dark Mode Toggle
+const themeBtn = document.getElementById("themeToggle");
+themeBtn.addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme");
+  if(current === "dark"){
+    document.documentElement.setAttribute("data-theme","light");
+    themeBtn.innerHTML=`<i class="fa-solid fa-moon"></i>`;
+  } else{
+    document.documentElement.setAttribute("data-theme","dark");
+    themeBtn.innerHTML=`<i class="fa-solid fa-sun"></i>`;
+  }
+});
+
+// Navigation Highlight
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+const header = document.querySelector("header");
+const headerH = header.offsetHeight || 64;
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      const id = entry.target.id;
+      navLinks.forEach(link => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+      });
+    }
+  });
+}, { root: null, threshold: 0.6, rootMargin: `-${headerH}px 0px 0px 0px` });
+
+sections.forEach(sec => observer.observe(sec));
+
+// Make "Email Us" scroll to the email section (fallback to mailto if #email missing)
+const contactEmailLink = document.querySelector('#contact a[href^="mailto"]');
+if(contactEmailLink){
+  contactEmailLink.addEventListener('click', (e) => {
+    const emailSection = document.getElementById('email');
+    if(emailSection){
+      e.preventDefault();
+      emailSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+}
+
+// Email form -> mailto with validation
+const emailFormEl = document.getElementById('emailForm');
+if(emailFormEl){
+  emailFormEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const fromEmail = document.getElementById('fromEmail').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const sendCopy = document.getElementById('sendCopy').checked;
+
+    if(!name || !fromEmail || !subject || !message){
+      alert('Please fill in all email fields.');
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!emailPattern.test(fromEmail)){
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    const to = 'lovinghomes66@gmail.com';
+    const bodyText =
+`From: ${name} <${fromEmail}>
+
+${message}
+
+--
+Sent from Loving Homes website`;
+
+    const params = [
+      `subject=${encodeURIComponent(subject)}`,
+      `body=${encodeURIComponent(bodyText)}`
+    ];
+    if(sendCopy) params.push(`cc=${encodeURIComponent(fromEmail)}`);
+
+    window.location.href = `mailto:${to}?${params.join('&')}`;
+  });
+}
+
+// QUIZ: Validate required fields; show recommendations and suggest packages
+document.getElementById('petQuiz').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const breed = document.getElementById('breed').value.trim();
+  const energy = document.getElementById('energy').value;
+  const temperament = document.getElementById('temperament').value;
+  const needs = document.getElementById('needs').value;
+
+  if(!breed || !energy || !temperament || !needs){
+    alert('Please fill in all quiz fields.');
+    return;
+  }
+
+  const recs = [];
+  if(energy==='high') recs.push('Spacious outdoor areas for play');
+  if(energy==='medium') recs.push('Balanced mix of indoor & outdoor activities');
+  if(energy==='low') recs.push('Relaxing indoor spaces & quiet walks');
+  if(temperament==='anxious') recs.push('Private suites & gentle care');
+  if(temperament==='playful') recs.push('Interactive play sessions & socialization');
+  if(temperament==='calm') recs.push('Calm environment & cozy rest areas');
+  if(needs==='quiet') recs.push('Private, peaceful accommodation');
+  if(needs==='active') recs.push('Agility courses and play trails');
+  if(needs==='social') recs.push('Group play and compatible companions');
+
+  const pkgSuggestions = new Set();
+  if(energy==='low' || temperament==='calm' || needs==='quiet') pkgSuggestions.add('Comfort Stay');
+  if(energy==='high' || temperament==='playful' || needs==='active' || needs==='social') pkgSuggestions.add('Adventure & Play');
+  if(temperament==='anxious' || needs==='quiet') pkgSuggestions.add('Wellness & Spa');
+
+  let html = `<h3>Pet Profile: ${breed}</h3>`;
+  html += `<p>Energy Level: ${energy.charAt(0).toUpperCase()+energy.slice(1)}</p>`;
+  html += `<p>Temperament: ${temperament.charAt(0).toUpperCase()+temperament.slice(1)}</p>`;
+  html += `<p>Recommended Stay & Services:</p><ul class="rec-list">`;
+  recs.forEach(r => html += `<li>${r}</li>`);
+  html += `</ul>`;
+
+  html += `<div class="package-suggestions"><h4>Suggested Packages</h4><div class="suggestion-buttons">`;
+  if(pkgSuggestions.has('Comfort Stay')) html += `<a href="#pkg-comfort" class="suggestion-btn">Comfort Stay</a>`;
+  if(pkgSuggestions.has('Adventure & Play')) html += `<a href="#pkg-adventure" class="suggestion-btn">Adventure &amp; Play</a>`;
+  if(pkgSuggestions.has('Wellness & Spa')) html += `<a href="#pkg-wellness" class="suggestion-btn">Wellness &amp; Spa</a>`;
+  html += `</div><p class="tiny-note">Jump to a package to learn more or select it.</p></div>`;
+
+  const resultEl = document.getElementById('quizResult');
+  resultEl.innerHTML = html;
+  resultEl.style.display = 'block';
+  resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// Gallery filters
+const filterButtons = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    galleryItems.forEach(item => {
+      const match = filter === 'all' || item.dataset.category === filter;
+      item.classList.toggle('hidden', !match);
+    });
+  });
+});
+
+// Lightbox
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.innerHTML = '<img alt=""><span class="close">&times;</span>';
+document.body.appendChild(lightbox);
+const lightboxImg = lightbox.querySelector('img');
+const lightboxClose = lightbox.querySelector('.close');
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.classList.add('open');
+  });
+});
+lightbox.addEventListener('click', (e) => {
+  if(e.target === lightbox || e.target === lightboxClose){
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  }
+});
+</script>
+</body>
+</html>
